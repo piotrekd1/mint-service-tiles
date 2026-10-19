@@ -1,0 +1,120 @@
+{
+  "schema": {
+    "services": {
+      "type": "list",
+      "description": "Figyelt címek",
+      "columns": [
+        {
+          "id": "name",
+          "title": "Név",
+          "type": "string"
+        },
+        {
+          "id": "target",
+          "title": "URL / IP",
+          "type": "string"
+        },
+        {
+          "id": "mode",
+          "title": "Mód",
+          "type": "string",
+          "options": {
+            "HTTP": "http",
+            "PING": "ping"
+          },
+          "default": "http"
+        },
+        {
+          "id": "interval",
+          "title": "Időköz (másodperc)",
+          "type": "integer",
+          "default": 30,
+          "min": 5,
+          "max": 86400
+        }
+      ],
+      "default": [],
+      "show-buttons": true
+    },
+    "tile-size": {
+      "type": "spinbutton",
+      "description": "Csempe mérete",
+      "default": 80,
+      "min": 10,
+      "max": 180,
+      "step": 1,
+      "units": "px"
+    },
+    "columns": {
+      "type": "spinbutton",
+      "description": "Oszlopok száma",
+      "default": 3,
+      "min": 1,
+      "max": 8,
+      "step": 1
+    },
+    "alarm-window": {
+      "type": "switch",
+      "description": "Riasztás mindig felül",
+      "default": true
+    },
+    "check-now": {
+      "type": "button",
+      "description": "Ellenőrzés most",
+      "callback": "checkNow"
+    },
+    "background-color": {
+      "type": "combobox",
+      "description": "Háttérszín",
+      "default": "dark",
+      "options": {
+        "Sötét": "dark",
+        "Világos": "light",
+        "Fekete": "black",
+        "Átlátszó": "transparent"
+      }
+    },
+    "show-title": {
+      "type": "switch",
+      "description": "Cím megjelenítése",
+      "default": false
+    },
+    "tile-margin": {
+      "type": "spinbutton",
+      "description": "Ablak margója (px)",
+      "default": 6,
+      "min": 0,
+      "max": 60,
+      "step": 1,
+      "units": "px"
+    },
+    "tile-gap": {
+      "type": "spinbutton",
+      "description": "Csempék távolsága (px)",
+      "default": 3,
+      "min": 0,
+      "max": 60,
+      "step": 1,
+      "units": "px"
+    }
+  },
+  "ui": {
+    "Service Monitor": "Szolgáltatásfigyelő",
+    "Right-click to add a service.": "Új szolgáltatáshoz kattintson jobb gombbal.",
+    "Add monitored service": "Figyelt szolgáltatás hozzáadása",
+    "Name": "Név",
+    "Check mode": "Ellenőrzési mód",
+    "Interval in seconds (min 5)": "Időköz másodpercben (min. 5)",
+    "Cancel": "Mégse",
+    "Add": "Hozzáadás",
+    "Enter an address and interval between 5 and 86400 seconds.": "Adjon meg címet és 5–86400 másodperces időközt.",
+    "Invalid HTTP/HTTPS address.": "Érvénytelen HTTP/HTTPS-cím.",
+    "Could not save: ": "Nem sikerült menteni: ",
+    "Not checked yet": "Még nincs ellenőrizve",
+    "OK": "OK",
+    "FAILED": "HIBA",
+    "none": "nincs",
+    "Last result": "Utolsó eredmény",
+    "Last check": "Utolsó ellenőrzés"
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "schema": {
+    "services": {
+      "type": "list",
+      "description": "Övervakade adresser",
+      "columns": [
+        {
+          "id": "name",
+          "title": "Namn",
+          "type": "string"
+        },
+        {
+          "id": "target",
+          "title": "URL / IP",
+          "type": "string"
+        },
+        {
+          "id": "mode",
+          "title": "Läge",
+          "type": "string",
+          "options": {
+            "HTTP": "http",
+            "PING": "ping"
+          },
+          "default": "http"
+        },
+        {
+          "id": "interval",
+          "title": "Intervall (sekunder)",
+          "type": "integer",
+          "default": 30,
+          "min": 5,
+          "max": 86400
+        }
+      ],
+      "default": [],
+      "show-buttons": true
+    },
+    "tile-size": {
+      "type": "spinbutton",
+      "description": "Rutstorlek",
+      "default": 80,
+      "min": 10,
+      "max": 180,
+      "step": 1,
+      "units": "px"
+    },
+    "columns": {
+      "type": "spinbutton",
+      "description": "Antal kolumner",
+      "default": 3,
+      "min": 1,
+      "max": 8,
+      "step": 1
+    },
+    "alarm-window": {
+      "type": "switch",
+      "description": "Larm alltid överst",
+      "default": true
+    },
+    "check-now": {
+      "type": "button",
+      "description": "Kontrollera nu",
+      "callback": "checkNow"
+    },
+    "background-color": {
+      "type": "combobox",
+      "description": "Bakgrundsfärg",
+      "default": "dark",
+      "options": {
+        "Mörk": "dark",
+        "Ljus": "light",
+        "Svart": "black",
+        "Genomskinlig": "transparent"
+      }
+    },
+    "show-title": {
+      "type": "switch",
+      "description": "Visa titel",
+      "default": false
+    },
+    "tile-margin": {
+      "type": "spinbutton",
+      "description": "Fönstermarginal (px)",
+      "default": 6,
+      "min": 0,
+      "max": 60,
+      "step": 1,
+      "units": "px"
+    },
+    "tile-gap": {
+      "type": "spinbutton",
+      "description": "Avstånd mellan rutor (px)",
+      "default": 3,
+      "min": 0,
+      "max": 60,
+      "step": 1,
+      "units": "px"
+    }
+  },
+  "ui": {
+    "Service Monitor": "Tjänsteövervakning",
+    "Right-click to add a service.": "Högerklicka för att lägga till en tjänst.",
+    "Add monitored service": "Lägg till övervakad tjänst",
+    "Name": "Namn",
+    "Check mode": "Kontrolläge",
+    "Interval in seconds (min 5)": "Intervall i sekunder (min. 5)",
+    "Cancel": "Avbryt",
+    "Add": "Lägg till",
+    "Enter an address and interval between 5 and 86400 seconds.": "Ange adress och intervall mellan 5 och 86400 sekunder.",
+    "Invalid HTTP/HTTPS address.": "Ogiltig HTTP/HTTPS-adress.",
+    "Could not save: ": "Kunde inte spara: ",
+    "Not checked yet": "Inte kontrollerad än",
+    "OK": "OK",
+    "FAILED": "FEL",
+    "none": "ingen",
+    "Last result": "Senaste resultat",
+    "Last check": "Senaste kontroll"
+  }
+}

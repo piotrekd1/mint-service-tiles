@@ -1,0 +1,120 @@
+{
+  "schema": {
+    "services": {
+      "type": "list",
+      "description": "Bewaakte adressen",
+      "columns": [
+        {
+          "id": "name",
+          "title": "Naam",
+          "type": "string"
+        },
+        {
+          "id": "target",
+          "title": "URL / IP",
+          "type": "string"
+        },
+        {
+          "id": "mode",
+          "title": "Modus",
+          "type": "string",
+          "options": {
+            "HTTP": "http",
+            "PING": "ping"
+          },
+          "default": "http"
+        },
+        {
+          "id": "interval",
+          "title": "Interval (seconden)",
+          "type": "integer",
+          "default": 30,
+          "min": 5,
+          "max": 86400
+        }
+      ],
+      "default": [],
+      "show-buttons": true
+    },
+    "tile-size": {
+      "type": "spinbutton",
+      "description": "Tegelgrootte",
+      "default": 80,
+      "min": 10,
+      "max": 180,
+      "step": 1,
+      "units": "px"
+    },
+    "columns": {
+      "type": "spinbutton",
+      "description": "Aantal kolommen",
+      "default": 3,
+      "min": 1,
+      "max": 8,
+      "step": 1
+    },
+    "alarm-window": {
+      "type": "switch",
+      "description": "Alarm altijd op voorgrond",
+      "default": true
+    },
+    "check-now": {
+      "type": "button",
+      "description": "Nu controleren",
+      "callback": "checkNow"
+    },
+    "background-color": {
+      "type": "combobox",
+      "description": "Achtergrondkleur",
+      "default": "dark",
+      "options": {
+        "Donker": "dark",
+        "Licht": "light",
+        "Zwart": "black",
+        "Transparant": "transparent"
+      }
+    },
+    "show-title": {
+      "type": "switch",
+      "description": "Titel weergeven",
+      "default": false
+    },
+    "tile-margin": {
+      "type": "spinbutton",
+      "description": "Venstermarge (px)",
+      "default": 6,
+      "min": 0,
+      "max": 60,
+      "step": 1,
+      "units": "px"
+    },
+    "tile-gap": {
+      "type": "spinbutton",
+      "description": "Ruimte tussen tegels (px)",
+      "default": 3,
+      "min": 0,
+      "max": 60,
+      "step": 1,
+      "units": "px"
+    }
+  },
+  "ui": {
+    "Service Monitor": "Servicemonitor",
+    "Right-click to add a service.": "Klik rechts om een dienst toe te voegen.",
+    "Add monitored service": "Bewaakte dienst toevoegen",
+    "Name": "Naam",
+    "Check mode": "Controlemodus",
+    "Interval in seconds (min 5)": "Interval in seconden (min. 5)",
+    "Cancel": "Annuleren",
+    "Add": "Toevoegen",
+    "Enter an address and interval between 5 and 86400 seconds.": "Voer een adres en interval van 5 tot 86400 seconden in.",
+    "Invalid HTTP/HTTPS address.": "Ongeldig HTTP/HTTPS-adres.",
+    "Could not save: ": "Opslaan mislukt: ",
+    "Not checked yet": "Nog niet gecontroleerd",
+    "OK": "OK",
+    "FAILED": "MISLUKT",
+    "none": "geen",
+    "Last result": "Laatste resultaat",
+    "Last check": "Laatste controle"
+  }
+}

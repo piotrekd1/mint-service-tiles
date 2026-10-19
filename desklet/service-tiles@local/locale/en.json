@@ -1,0 +1,120 @@
+{
+  "schema": {
+    "services": {
+      "type": "list",
+      "description": "Monitored addresses",
+      "columns": [
+        {
+          "id": "name",
+          "title": "Name",
+          "type": "string"
+        },
+        {
+          "id": "target",
+          "title": "URL / IP",
+          "type": "string"
+        },
+        {
+          "id": "mode",
+          "title": "Mode",
+          "type": "string",
+          "options": {
+            "HTTP": "http",
+            "PING": "ping"
+          },
+          "default": "http"
+        },
+        {
+          "id": "interval",
+          "title": "Interval (seconds)",
+          "type": "integer",
+          "default": 30,
+          "min": 5,
+          "max": 86400
+        }
+      ],
+      "default": [],
+      "show-buttons": true
+    },
+    "tile-size": {
+      "type": "spinbutton",
+      "description": "Tile size",
+      "default": 80,
+      "min": 10,
+      "max": 180,
+      "step": 1,
+      "units": "px"
+    },
+    "columns": {
+      "type": "spinbutton",
+      "description": "Number of columns",
+      "default": 3,
+      "min": 1,
+      "max": 8,
+      "step": 1
+    },
+    "alarm-window": {
+      "type": "switch",
+      "description": "Always-on-top alarm",
+      "default": true
+    },
+    "check-now": {
+      "type": "button",
+      "description": "Check now",
+      "callback": "checkNow"
+    },
+    "background-color": {
+      "type": "combobox",
+      "description": "Background color",
+      "default": "dark",
+      "options": {
+        "Dark": "dark",
+        "Light": "light",
+        "Black": "black",
+        "Transparent": "transparent"
+      }
+    },
+    "show-title": {
+      "type": "switch",
+      "description": "Show desklet title",
+      "default": false
+    },
+    "tile-margin": {
+      "type": "spinbutton",
+      "description": "Window padding (px)",
+      "default": 6,
+      "min": 0,
+      "max": 60,
+      "step": 1,
+      "units": "px"
+    },
+    "tile-gap": {
+      "type": "spinbutton",
+      "description": "Space between tiles (px)",
+      "default": 3,
+      "min": 0,
+      "max": 60,
+      "step": 1,
+      "units": "px"
+    }
+  },
+  "ui": {
+    "Service Monitor": "Service Monitor",
+    "Right-click to add a service.": "Right-click to add a service.",
+    "Add monitored service": "Add monitored service",
+    "Name": "Name",
+    "Check mode": "Check mode",
+    "Interval in seconds (min 5)": "Interval in seconds (min 5)",
+    "Cancel": "Cancel",
+    "Add": "Add",
+    "Enter an address and interval between 5 and 86400 seconds.": "Enter an address and interval between 5 and 86400 seconds.",
+    "Invalid HTTP/HTTPS address.": "Invalid HTTP/HTTPS address.",
+    "Could not save: ": "Could not save: ",
+    "Not checked yet": "Not checked yet",
+    "OK": "OK",
+    "FAILED": "FAILED",
+    "none": "none",
+    "Last result": "Last result",
+    "Last check": "Last check"
+  }
+}

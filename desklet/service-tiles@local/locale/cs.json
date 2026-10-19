@@ -1,0 +1,120 @@
+{
+  "schema": {
+    "services": {
+      "type": "list",
+      "description": "Sledované adresy",
+      "columns": [
+        {
+          "id": "name",
+          "title": "Název",
+          "type": "string"
+        },
+        {
+          "id": "target",
+          "title": "URL / IP",
+          "type": "string"
+        },
+        {
+          "id": "mode",
+          "title": "Režim",
+          "type": "string",
+          "options": {
+            "HTTP": "http",
+            "PING": "ping"
+          },
+          "default": "http"
+        },
+        {
+          "id": "interval",
+          "title": "Interval (sekundy)",
+          "type": "integer",
+          "default": 30,
+          "min": 5,
+          "max": 86400
+        }
+      ],
+      "default": [],
+      "show-buttons": true
+    },
+    "tile-size": {
+      "type": "spinbutton",
+      "description": "Velikost dlaždic",
+      "default": 80,
+      "min": 10,
+      "max": 180,
+      "step": 1,
+      "units": "px"
+    },
+    "columns": {
+      "type": "spinbutton",
+      "description": "Počet sloupců",
+      "default": 3,
+      "min": 1,
+      "max": 8,
+      "step": 1
+    },
+    "alarm-window": {
+      "type": "switch",
+      "description": "Alarm vždy navrchu",
+      "default": true
+    },
+    "check-now": {
+      "type": "button",
+      "description": "Zkontrolovat nyní",
+      "callback": "checkNow"
+    },
+    "background-color": {
+      "type": "combobox",
+      "description": "Barva pozadí",
+      "default": "dark",
+      "options": {
+        "Tmavá": "dark",
+        "Světlá": "light",
+        "Černá": "black",
+        "Průhledná": "transparent"
+      }
+    },
+    "show-title": {
+      "type": "switch",
+      "description": "Zobrazit název",
+      "default": false
+    },
+    "tile-margin": {
+      "type": "spinbutton",
+      "description": "Okraj okna (px)",
+      "default": 6,
+      "min": 0,
+      "max": 60,
+      "step": 1,
+      "units": "px"
+    },
+    "tile-gap": {
+      "type": "spinbutton",
+      "description": "Mezera mezi dlaždicemi (px)",
+      "default": 3,
+      "min": 0,
+      "max": 60,
+      "step": 1,
+      "units": "px"
+    }
+  },
+  "ui": {
+    "Service Monitor": "Monitor služeb",
+    "Right-click to add a service.": "Kliknutím pravým tlačítkem přidáte službu.",
+    "Add monitored service": "Přidat sledovanou službu",
+    "Name": "Název",
+    "Check mode": "Režim kontroly",
+    "Interval in seconds (min 5)": "Interval v sekundách (min. 5)",
+    "Cancel": "Zrušit",
+    "Add": "Přidat",
+    "Enter an address and interval between 5 and 86400 seconds.": "Zadejte adresu a interval 5 až 86400 sekund.",
+    "Invalid HTTP/HTTPS address.": "Neplatná HTTP/HTTPS adresa.",
+    "Could not save: ": "Uložení se nezdařilo: ",
+    "Not checked yet": "Zatím nekontrolováno",
+    "OK": "OK",
+    "FAILED": "CHYBA",
+    "none": "žádný",
+    "Last result": "Poslední výsledek",
+    "Last check": "Poslední kontrola"
+  }
+}

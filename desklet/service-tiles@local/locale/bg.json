@@ -1,0 +1,120 @@
+{
+  "schema": {
+    "services": {
+      "type": "list",
+      "description": "Наблюдавани адреси",
+      "columns": [
+        {
+          "id": "name",
+          "title": "Име",
+          "type": "string"
+        },
+        {
+          "id": "target",
+          "title": "URL / IP",
+          "type": "string"
+        },
+        {
+          "id": "mode",
+          "title": "Режим",
+          "type": "string",
+          "options": {
+            "HTTP": "http",
+            "PING": "ping"
+          },
+          "default": "http"
+        },
+        {
+          "id": "interval",
+          "title": "Интервал (секунди)",
+          "type": "integer",
+          "default": 30,
+          "min": 5,
+          "max": 86400
+        }
+      ],
+      "default": [],
+      "show-buttons": true
+    },
+    "tile-size": {
+      "type": "spinbutton",
+      "description": "Размер на плочките",
+      "default": 80,
+      "min": 10,
+      "max": 180,
+      "step": 1,
+      "units": "px"
+    },
+    "columns": {
+      "type": "spinbutton",
+      "description": "Брой колони",
+      "default": 3,
+      "min": 1,
+      "max": 8,
+      "step": 1
+    },
+    "alarm-window": {
+      "type": "switch",
+      "description": "Аларма винаги отгоре",
+      "default": true
+    },
+    "check-now": {
+      "type": "button",
+      "description": "Провери сега",
+      "callback": "checkNow"
+    },
+    "background-color": {
+      "type": "combobox",
+      "description": "Цвят на фона",
+      "default": "dark",
+      "options": {
+        "Тъмен": "dark",
+        "Светъл": "light",
+        "Черен": "black",
+        "Прозрачен": "transparent"
+      }
+    },
+    "show-title": {
+      "type": "switch",
+      "description": "Показване на заглавие",
+      "default": false
+    },
+    "tile-margin": {
+      "type": "spinbutton",
+      "description": "Поле на прозореца (px)",
+      "default": 6,
+      "min": 0,
+      "max": 60,
+      "step": 1,
+      "units": "px"
+    },
+    "tile-gap": {
+      "type": "spinbutton",
+      "description": "Разстояние между плочките (px)",
+      "default": 3,
+      "min": 0,
+      "max": 60,
+      "step": 1,
+      "units": "px"
+    }
+  },
+  "ui": {
+    "Service Monitor": "Монитор на услуги",
+    "Right-click to add a service.": "Щракнете с десен бутон, за да добавите услуга.",
+    "Add monitored service": "Добавяне на услуга",
+    "Name": "Име",
+    "Check mode": "Режим на проверка",
+    "Interval in seconds (min 5)": "Интервал в секунди (мин. 5)",
+    "Cancel": "Отказ",
+    "Add": "Добавяне",
+    "Enter an address and interval between 5 and 86400 seconds.": "Въведете адрес и интервал от 5 до 86400 секунди.",
+    "Invalid HTTP/HTTPS address.": "Невалиден HTTP/HTTPS адрес.",
+    "Could not save: ": "Неуспешно запазване: ",
+    "Not checked yet": "Все още няма проверка",
+    "OK": "OK",
+    "FAILED": "ГРЕШКА",
+    "none": "няма",
+    "Last result": "Последен резултат",
+    "Last check": "Последна проверка"
+  }
+}

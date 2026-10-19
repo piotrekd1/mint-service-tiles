@@ -1,0 +1,9 @@
+{
+  "uuid": "service-tiles@local",
+  "name": "Service Tiles",
+  "description": "HTTP 200 and ICMP status tiles with independent logs and alert window",
+  "version": "0.20",
+  "prevent-decorations": true,
+  "author": "piotrek-d1",
+  "email": "piotrek-d1@o2.pl"
+}

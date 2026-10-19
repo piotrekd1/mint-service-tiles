@@ -1,0 +1,120 @@
+{
+  "schema": {
+    "services": {
+      "type": "list",
+      "description": "監視対象アドレス",
+      "columns": [
+        {
+          "id": "name",
+          "title": "名前",
+          "type": "string"
+        },
+        {
+          "id": "target",
+          "title": "URL / IP",
+          "type": "string"
+        },
+        {
+          "id": "mode",
+          "title": "方式",
+          "type": "string",
+          "options": {
+            "HTTP": "http",
+            "PING": "ping"
+          },
+          "default": "http"
+        },
+        {
+          "id": "interval",
+          "title": "間隔（秒）",
+          "type": "integer",
+          "default": 30,
+          "min": 5,
+          "max": 86400
+        }
+      ],
+      "default": [],
+      "show-buttons": true
+    },
+    "tile-size": {
+      "type": "spinbutton",
+      "description": "タイルのサイズ",
+      "default": 80,
+      "min": 10,
+      "max": 180,
+      "step": 1,
+      "units": "px"
+    },
+    "columns": {
+      "type": "spinbutton",
+      "description": "列数",
+      "default": 3,
+      "min": 1,
+      "max": 8,
+      "step": 1
+    },
+    "alarm-window": {
+      "type": "switch",
+      "description": "警告を常に最前面に表示",
+      "default": true
+    },
+    "check-now": {
+      "type": "button",
+      "description": "今すぐ確認",
+      "callback": "checkNow"
+    },
+    "background-color": {
+      "type": "combobox",
+      "description": "背景色",
+      "default": "dark",
+      "options": {
+        "ダーク": "dark",
+        "ライト": "light",
+        "黒": "black",
+        "透明": "transparent"
+      }
+    },
+    "show-title": {
+      "type": "switch",
+      "description": "タイトルを表示",
+      "default": false
+    },
+    "tile-margin": {
+      "type": "spinbutton",
+      "description": "ウィンドウの余白（px）",
+      "default": 6,
+      "min": 0,
+      "max": 60,
+      "step": 1,
+      "units": "px"
+    },
+    "tile-gap": {
+      "type": "spinbutton",
+      "description": "タイルの間隔（px）",
+      "default": 3,
+      "min": 0,
+      "max": 60,
+      "step": 1,
+      "units": "px"
+    }
+  },
+  "ui": {
+    "Service Monitor": "サービス監視",
+    "Right-click to add a service.": "右クリックしてサービスを追加します。",
+    "Add monitored service": "監視サービスを追加",
+    "Name": "名前",
+    "Check mode": "確認方式",
+    "Interval in seconds (min 5)": "確認間隔（秒、最低5）",
+    "Cancel": "キャンセル",
+    "Add": "追加",
+    "Enter an address and interval between 5 and 86400 seconds.": "アドレスと5～86400秒の間隔を入力してください。",
+    "Invalid HTTP/HTTPS address.": "HTTP/HTTPSアドレスが無効です。",
+    "Could not save: ": "保存できませんでした: ",
+    "Not checked yet": "未確認",
+    "OK": "OK",
+    "FAILED": "失敗",
+    "none": "なし",
+    "Last result": "前回の結果",
+    "Last check": "前回の確認"
+  }
+}

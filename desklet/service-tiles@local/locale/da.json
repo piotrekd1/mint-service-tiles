@@ -1,0 +1,120 @@
+{
+  "schema": {
+    "services": {
+      "type": "list",
+      "description": "Overvågede adresser",
+      "columns": [
+        {
+          "id": "name",
+          "title": "Navn",
+          "type": "string"
+        },
+        {
+          "id": "target",
+          "title": "URL / IP",
+          "type": "string"
+        },
+        {
+          "id": "mode",
+          "title": "Tilstand",
+          "type": "string",
+          "options": {
+            "HTTP": "http",
+            "PING": "ping"
+          },
+          "default": "http"
+        },
+        {
+          "id": "interval",
+          "title": "Interval (sekunder)",
+          "type": "integer",
+          "default": 30,
+          "min": 5,
+          "max": 86400
+        }
+      ],
+      "default": [],
+      "show-buttons": true
+    },
+    "tile-size": {
+      "type": "spinbutton",
+      "description": "Flisestørrelse",
+      "default": 80,
+      "min": 10,
+      "max": 180,
+      "step": 1,
+      "units": "px"
+    },
+    "columns": {
+      "type": "spinbutton",
+      "description": "Antal kolonner",
+      "default": 3,
+      "min": 1,
+      "max": 8,
+      "step": 1
+    },
+    "alarm-window": {
+      "type": "switch",
+      "description": "Alarm altid øverst",
+      "default": true
+    },
+    "check-now": {
+      "type": "button",
+      "description": "Kontrollér nu",
+      "callback": "checkNow"
+    },
+    "background-color": {
+      "type": "combobox",
+      "description": "Baggrundsfarve",
+      "default": "dark",
+      "options": {
+        "Mørk": "dark",
+        "Lys": "light",
+        "Sort": "black",
+        "Gennemsigtig": "transparent"
+      }
+    },
+    "show-title": {
+      "type": "switch",
+      "description": "Vis titel",
+      "default": false
+    },
+    "tile-margin": {
+      "type": "spinbutton",
+      "description": "Vinduesmargen (px)",
+      "default": 6,
+      "min": 0,
+      "max": 60,
+      "step": 1,
+      "units": "px"
+    },
+    "tile-gap": {
+      "type": "spinbutton",
+      "description": "Afstand mellem fliser (px)",
+      "default": 3,
+      "min": 0,
+      "max": 60,
+      "step": 1,
+      "units": "px"
+    }
+  },
+  "ui": {
+    "Service Monitor": "Tjenesteovervågning",
+    "Right-click to add a service.": "Højreklik for at tilføje en tjeneste.",
+    "Add monitored service": "Tilføj overvåget tjeneste",
+    "Name": "Navn",
+    "Check mode": "Kontroltilstand",
+    "Interval in seconds (min 5)": "Interval i sekunder (min. 5)",
+    "Cancel": "Annuller",
+    "Add": "Tilføj",
+    "Enter an address and interval between 5 and 86400 seconds.": "Indtast adresse og interval mellem 5 og 86400 sekunder.",
+    "Invalid HTTP/HTTPS address.": "Ugyldig HTTP/HTTPS-adresse.",
+    "Could not save: ": "Kunne ikke gemme: ",
+    "Not checked yet": "Ikke kontrolleret endnu",
+    "OK": "OK",
+    "FAILED": "FEJL",
+    "none": "ingen",
+    "Last result": "Seneste resultat",
+    "Last check": "Seneste kontrol"
+  }
+}

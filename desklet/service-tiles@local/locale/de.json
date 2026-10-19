@@ -1,0 +1,120 @@
+{
+  "schema": {
+    "services": {
+      "type": "list",
+      "description": "Überwachte Adressen",
+      "columns": [
+        {
+          "id": "name",
+          "title": "Name",
+          "type": "string"
+        },
+        {
+          "id": "target",
+          "title": "URL / IP",
+          "type": "string"
+        },
+        {
+          "id": "mode",
+          "title": "Modus",
+          "type": "string",
+          "options": {
+            "HTTP": "http",
+            "PING": "ping"
+          },
+          "default": "http"
+        },
+        {
+          "id": "interval",
+          "title": "Intervall (Sekunden)",
+          "type": "integer",
+          "default": 30,
+          "min": 5,
+          "max": 86400
+        }
+      ],
+      "default": [],
+      "show-buttons": true
+    },
+    "tile-size": {
+      "type": "spinbutton",
+      "description": "Kachelgröße",
+      "default": 80,
+      "min": 10,
+      "max": 180,
+      "step": 1,
+      "units": "px"
+    },
+    "columns": {
+      "type": "spinbutton",
+      "description": "Spaltenanzahl",
+      "default": 3,
+      "min": 1,
+      "max": 8,
+      "step": 1
+    },
+    "alarm-window": {
+      "type": "switch",
+      "description": "Alarm immer im Vordergrund",
+      "default": true
+    },
+    "check-now": {
+      "type": "button",
+      "description": "Jetzt prüfen",
+      "callback": "checkNow"
+    },
+    "background-color": {
+      "type": "combobox",
+      "description": "Hintergrundfarbe",
+      "default": "dark",
+      "options": {
+        "Dunkel": "dark",
+        "Hell": "light",
+        "Schwarz": "black",
+        "Transparent": "transparent"
+      }
+    },
+    "show-title": {
+      "type": "switch",
+      "description": "Desklet-Titel anzeigen",
+      "default": false
+    },
+    "tile-margin": {
+      "type": "spinbutton",
+      "description": "Fensterabstand (px)",
+      "default": 6,
+      "min": 0,
+      "max": 60,
+      "step": 1,
+      "units": "px"
+    },
+    "tile-gap": {
+      "type": "spinbutton",
+      "description": "Abstand zwischen Kacheln (px)",
+      "default": 3,
+      "min": 0,
+      "max": 60,
+      "step": 1,
+      "units": "px"
+    }
+  },
+  "ui": {
+    "Service Monitor": "Dienstüberwachung",
+    "Right-click to add a service.": "Rechtsklick, um einen Dienst hinzuzufügen.",
+    "Add monitored service": "Überwachten Dienst hinzufügen",
+    "Name": "Name",
+    "Check mode": "Prüfmodus",
+    "Interval in seconds (min 5)": "Intervall in Sekunden (min. 5)",
+    "Cancel": "Abbrechen",
+    "Add": "Hinzufügen",
+    "Enter an address and interval between 5 and 86400 seconds.": "Adresse und Intervall zwischen 5 und 86400 Sekunden eingeben.",
+    "Invalid HTTP/HTTPS address.": "Ungültige HTTP/HTTPS-Adresse.",
+    "Could not save: ": "Speichern fehlgeschlagen: ",
+    "Not checked yet": "Noch nicht geprüft",
+    "OK": "OK",
+    "FAILED": "FEHLER",
+    "none": "keine",
+    "Last result": "Letztes Ergebnis",
+    "Last check": "Letzte Prüfung"
+  }
+}

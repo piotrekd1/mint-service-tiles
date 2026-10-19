@@ -1,0 +1,120 @@
+{
+  "schema": {
+    "services": {
+      "type": "list",
+      "description": "Valvotut osoitteet",
+      "columns": [
+        {
+          "id": "name",
+          "title": "Nimi",
+          "type": "string"
+        },
+        {
+          "id": "target",
+          "title": "URL / IP",
+          "type": "string"
+        },
+        {
+          "id": "mode",
+          "title": "Tila",
+          "type": "string",
+          "options": {
+            "HTTP": "http",
+            "PING": "ping"
+          },
+          "default": "http"
+        },
+        {
+          "id": "interval",
+          "title": "Aikaväli (sekuntia)",
+          "type": "integer",
+          "default": 30,
+          "min": 5,
+          "max": 86400
+        }
+      ],
+      "default": [],
+      "show-buttons": true
+    },
+    "tile-size": {
+      "type": "spinbutton",
+      "description": "Ruutujen koko",
+      "default": 80,
+      "min": 10,
+      "max": 180,
+      "step": 1,
+      "units": "px"
+    },
+    "columns": {
+      "type": "spinbutton",
+      "description": "Sarakkeiden määrä",
+      "default": 3,
+      "min": 1,
+      "max": 8,
+      "step": 1
+    },
+    "alarm-window": {
+      "type": "switch",
+      "description": "Hälytys aina päällimmäisenä",
+      "default": true
+    },
+    "check-now": {
+      "type": "button",
+      "description": "Tarkista nyt",
+      "callback": "checkNow"
+    },
+    "background-color": {
+      "type": "combobox",
+      "description": "Taustaväri",
+      "default": "dark",
+      "options": {
+        "Tumma": "dark",
+        "Vaalea": "light",
+        "Musta": "black",
+        "Läpinäkyvä": "transparent"
+      }
+    },
+    "show-title": {
+      "type": "switch",
+      "description": "Näytä otsikko",
+      "default": false
+    },
+    "tile-margin": {
+      "type": "spinbutton",
+      "description": "Ikkunan reunus (px)",
+      "default": 6,
+      "min": 0,
+      "max": 60,
+      "step": 1,
+      "units": "px"
+    },
+    "tile-gap": {
+      "type": "spinbutton",
+      "description": "Ruutujen väli (px)",
+      "default": 3,
+      "min": 0,
+      "max": 60,
+      "step": 1,
+      "units": "px"
+    }
+  },
+  "ui": {
+    "Service Monitor": "Palvelujen valvonta",
+    "Right-click to add a service.": "Lisää palvelu napsauttamalla hiiren oikeaa painiketta.",
+    "Add monitored service": "Lisää valvottu palvelu",
+    "Name": "Nimi",
+    "Check mode": "Tarkistustila",
+    "Interval in seconds (min 5)": "Aikaväli sekunteina (väh. 5)",
+    "Cancel": "Peruuta",
+    "Add": "Lisää",
+    "Enter an address and interval between 5 and 86400 seconds.": "Anna osoite ja aikaväli 5–86400 sekuntia.",
+    "Invalid HTTP/HTTPS address.": "Virheellinen HTTP/HTTPS-osoite.",
+    "Could not save: ": "Tallennus epäonnistui: ",
+    "Not checked yet": "Ei vielä tarkistettu",
+    "OK": "OK",
+    "FAILED": "VIRHE",
+    "none": "ei mitään",
+    "Last result": "Viimeisin tulos",
+    "Last check": "Viimeisin tarkistus"
+  }
+}

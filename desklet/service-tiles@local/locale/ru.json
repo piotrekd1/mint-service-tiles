@@ -1,0 +1,120 @@
+{
+  "schema": {
+    "services": {
+      "type": "list",
+      "description": "Отслеживаемые адреса",
+      "columns": [
+        {
+          "id": "name",
+          "title": "Имя",
+          "type": "string"
+        },
+        {
+          "id": "target",
+          "title": "URL / IP",
+          "type": "string"
+        },
+        {
+          "id": "mode",
+          "title": "Режим",
+          "type": "string",
+          "options": {
+            "HTTP": "http",
+            "PING": "ping"
+          },
+          "default": "http"
+        },
+        {
+          "id": "interval",
+          "title": "Интервал (секунды)",
+          "type": "integer",
+          "default": 30,
+          "min": 5,
+          "max": 86400
+        }
+      ],
+      "default": [],
+      "show-buttons": true
+    },
+    "tile-size": {
+      "type": "spinbutton",
+      "description": "Размер плиток",
+      "default": 80,
+      "min": 10,
+      "max": 180,
+      "step": 1,
+      "units": "px"
+    },
+    "columns": {
+      "type": "spinbutton",
+      "description": "Число столбцов",
+      "default": 3,
+      "min": 1,
+      "max": 8,
+      "step": 1
+    },
+    "alarm-window": {
+      "type": "switch",
+      "description": "Оповещение поверх окон",
+      "default": true
+    },
+    "check-now": {
+      "type": "button",
+      "description": "Проверить сейчас",
+      "callback": "checkNow"
+    },
+    "background-color": {
+      "type": "combobox",
+      "description": "Цвет фона",
+      "default": "dark",
+      "options": {
+        "Тёмный": "dark",
+        "Светлый": "light",
+        "Чёрный": "black",
+        "Прозрачный": "transparent"
+      }
+    },
+    "show-title": {
+      "type": "switch",
+      "description": "Показать заголовок",
+      "default": false
+    },
+    "tile-margin": {
+      "type": "spinbutton",
+      "description": "Отступ окна (пкс)",
+      "default": 6,
+      "min": 0,
+      "max": 60,
+      "step": 1,
+      "units": "px"
+    },
+    "tile-gap": {
+      "type": "spinbutton",
+      "description": "Расстояние между плитками (пкс)",
+      "default": 3,
+      "min": 0,
+      "max": 60,
+      "step": 1,
+      "units": "px"
+    }
+  },
+  "ui": {
+    "Service Monitor": "Монитор служб",
+    "Right-click to add a service.": "Нажмите правой кнопкой, чтобы добавить службу.",
+    "Add monitored service": "Добавить службу",
+    "Name": "Имя",
+    "Check mode": "Режим проверки",
+    "Interval in seconds (min 5)": "Интервал в секундах (мин. 5)",
+    "Cancel": "Отмена",
+    "Add": "Добавить",
+    "Enter an address and interval between 5 and 86400 seconds.": "Укажите адрес и интервал от 5 до 86400 секунд.",
+    "Invalid HTTP/HTTPS address.": "Недопустимый HTTP/HTTPS адрес.",
+    "Could not save: ": "Не удалось сохранить: ",
+    "Not checked yet": "Ещё не проверено",
+    "OK": "OK",
+    "FAILED": "ОШИБКА",
+    "none": "нет",
+    "Last result": "Последний результат",
+    "Last check": "Последняя проверка"
+  }
+}

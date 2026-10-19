@@ -1,0 +1,120 @@
+{
+  "schema": {
+    "services": {
+      "type": "list",
+      "description": "İzlenen adresler",
+      "columns": [
+        {
+          "id": "name",
+          "title": "Ad",
+          "type": "string"
+        },
+        {
+          "id": "target",
+          "title": "URL / IP",
+          "type": "string"
+        },
+        {
+          "id": "mode",
+          "title": "Mod",
+          "type": "string",
+          "options": {
+            "HTTP": "http",
+            "PING": "ping"
+          },
+          "default": "http"
+        },
+        {
+          "id": "interval",
+          "title": "Aralık (saniye)",
+          "type": "integer",
+          "default": 30,
+          "min": 5,
+          "max": 86400
+        }
+      ],
+      "default": [],
+      "show-buttons": true
+    },
+    "tile-size": {
+      "type": "spinbutton",
+      "description": "Karo boyutu",
+      "default": 80,
+      "min": 10,
+      "max": 180,
+      "step": 1,
+      "units": "px"
+    },
+    "columns": {
+      "type": "spinbutton",
+      "description": "Sütun sayısı",
+      "default": 3,
+      "min": 1,
+      "max": 8,
+      "step": 1
+    },
+    "alarm-window": {
+      "type": "switch",
+      "description": "Uyarı her zaman üstte",
+      "default": true
+    },
+    "check-now": {
+      "type": "button",
+      "description": "Şimdi kontrol et",
+      "callback": "checkNow"
+    },
+    "background-color": {
+      "type": "combobox",
+      "description": "Arka plan rengi",
+      "default": "dark",
+      "options": {
+        "Koyu": "dark",
+        "Açık": "light",
+        "Siyah": "black",
+        "Şeffaf": "transparent"
+      }
+    },
+    "show-title": {
+      "type": "switch",
+      "description": "Başlığı göster",
+      "default": false
+    },
+    "tile-margin": {
+      "type": "spinbutton",
+      "description": "Pencere kenar boşluğu (px)",
+      "default": 6,
+      "min": 0,
+      "max": 60,
+      "step": 1,
+      "units": "px"
+    },
+    "tile-gap": {
+      "type": "spinbutton",
+      "description": "Karolar arası boşluk (px)",
+      "default": 3,
+      "min": 0,
+      "max": 60,
+      "step": 1,
+      "units": "px"
+    }
+  },
+  "ui": {
+    "Service Monitor": "Hizmet izleyici",
+    "Right-click to add a service.": "Hizmet eklemek için sağ tıklayın.",
+    "Add monitored service": "İzlenen hizmet ekle",
+    "Name": "Ad",
+    "Check mode": "Kontrol modu",
+    "Interval in seconds (min 5)": "Saniye cinsinden aralık (en az 5)",
+    "Cancel": "İptal",
+    "Add": "Ekle",
+    "Enter an address and interval between 5 and 86400 seconds.": "5 ile 86400 saniye arasında adres ve aralık girin.",
+    "Invalid HTTP/HTTPS address.": "Geçersiz HTTP/HTTPS adresi.",
+    "Could not save: ": "Kaydedilemedi: ",
+    "Not checked yet": "Henüz kontrol edilmedi",
+    "OK": "OK",
+    "FAILED": "HATA",
+    "none": "yok",
+    "Last result": "Son sonuç",
+    "Last check": "Son kontrol"
+  }
+}

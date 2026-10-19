@@ -1,0 +1,120 @@
+{
+  "schema": {
+    "services": {
+      "type": "list",
+      "description": "Adrese monitorizate",
+      "columns": [
+        {
+          "id": "name",
+          "title": "Nume",
+          "type": "string"
+        },
+        {
+          "id": "target",
+          "title": "URL / IP",
+          "type": "string"
+        },
+        {
+          "id": "mode",
+          "title": "Mod",
+          "type": "string",
+          "options": {
+            "HTTP": "http",
+            "PING": "ping"
+          },
+          "default": "http"
+        },
+        {
+          "id": "interval",
+          "title": "Interval (secunde)",
+          "type": "integer",
+          "default": 30,
+          "min": 5,
+          "max": 86400
+        }
+      ],
+      "default": [],
+      "show-buttons": true
+    },
+    "tile-size": {
+      "type": "spinbutton",
+      "description": "Dimensiune dale",
+      "default": 80,
+      "min": 10,
+      "max": 180,
+      "step": 1,
+      "units": "px"
+    },
+    "columns": {
+      "type": "spinbutton",
+      "description": "Număr de coloane",
+      "default": 3,
+      "min": 1,
+      "max": 8,
+      "step": 1
+    },
+    "alarm-window": {
+      "type": "switch",
+      "description": "Alarmă mereu deasupra",
+      "default": true
+    },
+    "check-now": {
+      "type": "button",
+      "description": "Verifică acum",
+      "callback": "checkNow"
+    },
+    "background-color": {
+      "type": "combobox",
+      "description": "Culoare fundal",
+      "default": "dark",
+      "options": {
+        "Întunecat": "dark",
+        "Deschis": "light",
+        "Negru": "black",
+        "Transparent": "transparent"
+      }
+    },
+    "show-title": {
+      "type": "switch",
+      "description": "Afișează titlul",
+      "default": false
+    },
+    "tile-margin": {
+      "type": "spinbutton",
+      "description": "Margine fereastră (px)",
+      "default": 6,
+      "min": 0,
+      "max": 60,
+      "step": 1,
+      "units": "px"
+    },
+    "tile-gap": {
+      "type": "spinbutton",
+      "description": "Spațiu între dale (px)",
+      "default": 3,
+      "min": 0,
+      "max": 60,
+      "step": 1,
+      "units": "px"
+    }
+  },
+  "ui": {
+    "Service Monitor": "Monitor servicii",
+    "Right-click to add a service.": "Clic dreapta pentru a adăuga un serviciu.",
+    "Add monitored service": "Adaugă serviciu monitorizat",
+    "Name": "Nume",
+    "Check mode": "Mod de verificare",
+    "Interval in seconds (min 5)": "Interval în secunde (min. 5)",
+    "Cancel": "Anulează",
+    "Add": "Adaugă",
+    "Enter an address and interval between 5 and 86400 seconds.": "Introduceți o adresă și un interval între 5 și 86400 secunde.",
+    "Invalid HTTP/HTTPS address.": "Adresă HTTP/HTTPS nevalidă.",
+    "Could not save: ": "Nu s-a putut salva: ",
+    "Not checked yet": "Neverificat încă",
+    "OK": "OK",
+    "FAILED": "EROARE",
+    "none": "niciunul",
+    "Last result": "Ultimul rezultat",
+    "Last check": "Ultima verificare"
+  }
+}

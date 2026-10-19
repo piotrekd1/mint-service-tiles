@@ -1,0 +1,120 @@
+{
+  "schema": {
+    "services": {
+      "type": "list",
+      "description": "Контрольовані адреси",
+      "columns": [
+        {
+          "id": "name",
+          "title": "Назва",
+          "type": "string"
+        },
+        {
+          "id": "target",
+          "title": "URL / IP",
+          "type": "string"
+        },
+        {
+          "id": "mode",
+          "title": "Режим",
+          "type": "string",
+          "options": {
+            "HTTP": "http",
+            "PING": "ping"
+          },
+          "default": "http"
+        },
+        {
+          "id": "interval",
+          "title": "Інтервал (секунди)",
+          "type": "integer",
+          "default": 30,
+          "min": 5,
+          "max": 86400
+        }
+      ],
+      "default": [],
+      "show-buttons": true
+    },
+    "tile-size": {
+      "type": "spinbutton",
+      "description": "Розмір плиток",
+      "default": 80,
+      "min": 10,
+      "max": 180,
+      "step": 1,
+      "units": "px"
+    },
+    "columns": {
+      "type": "spinbutton",
+      "description": "Кількість стовпців",
+      "default": 3,
+      "min": 1,
+      "max": 8,
+      "step": 1
+    },
+    "alarm-window": {
+      "type": "switch",
+      "description": "Сповіщення поверх вікон",
+      "default": true
+    },
+    "check-now": {
+      "type": "button",
+      "description": "Перевірити зараз",
+      "callback": "checkNow"
+    },
+    "background-color": {
+      "type": "combobox",
+      "description": "Колір тла",
+      "default": "dark",
+      "options": {
+        "Темний": "dark",
+        "Світлий": "light",
+        "Чорний": "black",
+        "Прозорий": "transparent"
+      }
+    },
+    "show-title": {
+      "type": "switch",
+      "description": "Показати заголовок",
+      "default": false
+    },
+    "tile-margin": {
+      "type": "spinbutton",
+      "description": "Відступ вікна (пкс)",
+      "default": 6,
+      "min": 0,
+      "max": 60,
+      "step": 1,
+      "units": "px"
+    },
+    "tile-gap": {
+      "type": "spinbutton",
+      "description": "Відстань між плитками (пкс)",
+      "default": 3,
+      "min": 0,
+      "max": 60,
+      "step": 1,
+      "units": "px"
+    }
+  },
+  "ui": {
+    "Service Monitor": "Монітор служб",
+    "Right-click to add a service.": "Натисніть правою кнопкою, щоб додати службу.",
+    "Add monitored service": "Додати службу",
+    "Name": "Назва",
+    "Check mode": "Режим перевірки",
+    "Interval in seconds (min 5)": "Інтервал у секундах (мін. 5)",
+    "Cancel": "Скасувати",
+    "Add": "Додати",
+    "Enter an address and interval between 5 and 86400 seconds.": "Введіть адресу та інтервал від 5 до 86400 секунд.",
+    "Invalid HTTP/HTTPS address.": "Неправильна HTTP/HTTPS адреса.",
+    "Could not save: ": "Не вдалося зберегти: ",
+    "Not checked yet": "Ще не перевірено",
+    "OK": "OK",
+    "FAILED": "ПОМИЛКА",
+    "none": "немає",
+    "Last result": "Останній результат",
+    "Last check": "Остання перевірка"
+  }
+}

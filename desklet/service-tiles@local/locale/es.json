@@ -1,0 +1,120 @@
+{
+  "schema": {
+    "services": {
+      "type": "list",
+      "description": "Direcciones supervisadas",
+      "columns": [
+        {
+          "id": "name",
+          "title": "Nombre",
+          "type": "string"
+        },
+        {
+          "id": "target",
+          "title": "URL / IP",
+          "type": "string"
+        },
+        {
+          "id": "mode",
+          "title": "Modo",
+          "type": "string",
+          "options": {
+            "HTTP": "http",
+            "PING": "ping"
+          },
+          "default": "http"
+        },
+        {
+          "id": "interval",
+          "title": "Intervalo (segundos)",
+          "type": "integer",
+          "default": 30,
+          "min": 5,
+          "max": 86400
+        }
+      ],
+      "default": [],
+      "show-buttons": true
+    },
+    "tile-size": {
+      "type": "spinbutton",
+      "description": "Tamaño de mosaico",
+      "default": 80,
+      "min": 10,
+      "max": 180,
+      "step": 1,
+      "units": "px"
+    },
+    "columns": {
+      "type": "spinbutton",
+      "description": "Número de columnas",
+      "default": 3,
+      "min": 1,
+      "max": 8,
+      "step": 1
+    },
+    "alarm-window": {
+      "type": "switch",
+      "description": "Alarma siempre visible",
+      "default": true
+    },
+    "check-now": {
+      "type": "button",
+      "description": "Comprobar ahora",
+      "callback": "checkNow"
+    },
+    "background-color": {
+      "type": "combobox",
+      "description": "Color de fondo",
+      "default": "dark",
+      "options": {
+        "Oscuro": "dark",
+        "Claro": "light",
+        "Negro": "black",
+        "Transparente": "transparent"
+      }
+    },
+    "show-title": {
+      "type": "switch",
+      "description": "Mostrar título",
+      "default": false
+    },
+    "tile-margin": {
+      "type": "spinbutton",
+      "description": "Margen de ventana (px)",
+      "default": 6,
+      "min": 0,
+      "max": 60,
+      "step": 1,
+      "units": "px"
+    },
+    "tile-gap": {
+      "type": "spinbutton",
+      "description": "Espacio entre mosaicos (px)",
+      "default": 3,
+      "min": 0,
+      "max": 60,
+      "step": 1,
+      "units": "px"
+    }
+  },
+  "ui": {
+    "Service Monitor": "Monitor de servicios",
+    "Right-click to add a service.": "Clic derecho para añadir un servicio.",
+    "Add monitored service": "Añadir servicio supervisado",
+    "Name": "Nombre",
+    "Check mode": "Modo de comprobación",
+    "Interval in seconds (min 5)": "Intervalo en segundos (mín. 5)",
+    "Cancel": "Cancelar",
+    "Add": "Añadir",
+    "Enter an address and interval between 5 and 86400 seconds.": "Introduce una dirección y un intervalo de 5 a 86400 segundos.",
+    "Invalid HTTP/HTTPS address.": "Dirección HTTP/HTTPS no válida.",
+    "Could not save: ": "No se pudo guardar: ",
+    "Not checked yet": "Sin comprobar",
+    "OK": "OK",
+    "FAILED": "ERROR",
+    "none": "ninguno",
+    "Last result": "Último resultado",
+    "Last check": "Última comprobación"
+  }
+}

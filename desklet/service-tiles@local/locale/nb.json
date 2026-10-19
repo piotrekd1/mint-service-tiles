@@ -1,0 +1,120 @@
+{
+  "schema": {
+    "services": {
+      "type": "list",
+      "description": "Overvåkede adresser",
+      "columns": [
+        {
+          "id": "name",
+          "title": "Navn",
+          "type": "string"
+        },
+        {
+          "id": "target",
+          "title": "URL / IP",
+          "type": "string"
+        },
+        {
+          "id": "mode",
+          "title": "Modus",
+          "type": "string",
+          "options": {
+            "HTTP": "http",
+            "PING": "ping"
+          },
+          "default": "http"
+        },
+        {
+          "id": "interval",
+          "title": "Intervall (sekunder)",
+          "type": "integer",
+          "default": 30,
+          "min": 5,
+          "max": 86400
+        }
+      ],
+      "default": [],
+      "show-buttons": true
+    },
+    "tile-size": {
+      "type": "spinbutton",
+      "description": "Rutestørrelse",
+      "default": 80,
+      "min": 10,
+      "max": 180,
+      "step": 1,
+      "units": "px"
+    },
+    "columns": {
+      "type": "spinbutton",
+      "description": "Antall kolonner",
+      "default": 3,
+      "min": 1,
+      "max": 8,
+      "step": 1
+    },
+    "alarm-window": {
+      "type": "switch",
+      "description": "Alarm alltid øverst",
+      "default": true
+    },
+    "check-now": {
+      "type": "button",
+      "description": "Sjekk nå",
+      "callback": "checkNow"
+    },
+    "background-color": {
+      "type": "combobox",
+      "description": "Bakgrunnsfarge",
+      "default": "dark",
+      "options": {
+        "Mørk": "dark",
+        "Lys": "light",
+        "Svart": "black",
+        "Gjennomsiktig": "transparent"
+      }
+    },
+    "show-title": {
+      "type": "switch",
+      "description": "Vis tittel",
+      "default": false
+    },
+    "tile-margin": {
+      "type": "spinbutton",
+      "description": "Vindusmarg (px)",
+      "default": 6,
+      "min": 0,
+      "max": 60,
+      "step": 1,
+      "units": "px"
+    },
+    "tile-gap": {
+      "type": "spinbutton",
+      "description": "Avstand mellom ruter (px)",
+      "default": 3,
+      "min": 0,
+      "max": 60,
+      "step": 1,
+      "units": "px"
+    }
+  },
+  "ui": {
+    "Service Monitor": "Tjenesteovervåking",
+    "Right-click to add a service.": "Høyreklikk for å legge til en tjeneste.",
+    "Add monitored service": "Legg til overvåket tjeneste",
+    "Name": "Navn",
+    "Check mode": "Kontrollmodus",
+    "Interval in seconds (min 5)": "Intervall i sekunder (min. 5)",
+    "Cancel": "Avbryt",
+    "Add": "Legg til",
+    "Enter an address and interval between 5 and 86400 seconds.": "Oppgi adresse og intervall mellom 5 og 86400 sekunder.",
+    "Invalid HTTP/HTTPS address.": "Ugyldig HTTP/HTTPS-adresse.",
+    "Could not save: ": "Kunne ikke lagre: ",
+    "Not checked yet": "Ikke kontrollert ennå",
+    "OK": "OK",
+    "FAILED": "FEIL",
+    "none": "ingen",
+    "Last result": "Siste resultat",
+    "Last check": "Siste kontroll"
+  }
+}
